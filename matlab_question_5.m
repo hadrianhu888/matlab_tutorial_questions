@@ -1,10 +1,10 @@
 clear;
 close all;
 
-function I_real = caculate_intensity_gumbel(execel_tirgul_for_matlab, t , T)
-    [data, textdata] = xlsread('execel_tirgul_for_matlab.xlsx');   
-    p_katan = 1-(1/T);
-    gumbel = log(-1/log(p_katan));
+function I_real = caculate_intensity_gumbel(execel_tirgul_for_matlab, t, T)
+    [data, textdata] = xlsread('execel_tirgul_for_matlab.xlsx');
+    p_katan = 1 - (1 / T);
+    gumbel = log(-1 / log(p_katan));
 
     switch t
         case 0.166
@@ -23,10 +23,10 @@ function I_real = caculate_intensity_gumbel(execel_tirgul_for_matlab, t , T)
             col = 9;
         case 24
             col = 10;
-            
+
     end
-    I_avg = mean(data(2:10,col));
-    I_std = std(data(2:10,col));
-    I_real = gumbel*0.78*I_std+I_avg-0.45*I_std;
-   
+
+    I_avg = mean(data(2:10, col));
+    I_std = std(data(2:10, col));
+    I_real = gumbel * 0.78 * I_std + I_avg - 0.45 * I_std;
 end

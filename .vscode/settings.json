@@ -1,1 +1,5 @@
-{}
+{
+  "editor.fontSize": 20,
+  "editor.cursorSmoothCaretAnimation": true,
+  "C_Cpp_Runner.debuggerPath": "C:\\Mingw\\bin\\gdb"
+}
